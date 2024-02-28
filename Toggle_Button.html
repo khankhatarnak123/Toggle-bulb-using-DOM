@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle_Button</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dom Manipulation!</h1>
+        <img id="bulbImg" src="https://image.ibb.co/hoBxtm/light_bulb_off.png" alt="Bulb">
+        <button id="bulb-button" type="button" onclick="changeBulbImage()">OFF</button>  
+    </div>
+
+    <style>
+        body {
+            padding: 50px;
+            background: #f2f2f2;
+        }
+        h1 {
+            color: #808080d6;
+            letter-spacing: 0.2em;
+        }
+        #bulbImg {
+            width: 200px;
+            margin: 40px;
+        }
+        .container {
+            text-align: center;
+            box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+            padding: 20px;
+            background: #fff;
+            border-radius: 0.375rem;
+        }
+        #bulb-button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            box-shadow: 4px 4px 4px 0 rgba(46, 61, 73, 0.13);
+            border-radius: 0.25rem;
+            letter-spacing: 0.09375rem;
+            background: #fff;
+        }
+    </style>
+
+    <script>
+        let state = 0;
+        function changeBulbImage() {
+            var bulbImg = document.getElementById("bulbImg");
+            var button = document.getElementById("bulb-button");
+            if (state == 0) {
+                bulbImg.src = "https://image.ibb.co/cBBaeR/light_bulb_on.png";
+                button.textContent = "OFF";
+                state = 1;
+            } else {
+                bulbImg.src = "https://image.ibb.co/hoBxtm/light_bulb_off.png";
+                button.textContent = "ON";
+                state = 0;
+            }
+        }
+    </script>
+</body>
+</html>
